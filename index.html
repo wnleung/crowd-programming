@@ -14,36 +14,62 @@
     </head>
 
     <body>
-        <nav>
-          <div class="nav-wrapper grey darken-4">
-            <span>Click on all the recognizable <u><a class="modal-trigger" href="#example-modal">people</a></u> in the pictures below.</span>
-            <ul id="nav-mobile" class="left hide-on-med-and-down grey darken-4">
-              <li><a class="waves-effect waves-light btn">Undo</a></li>
-              <li><a class="waves-effect waves-light btn">Redo</a></li>
-            </ul>
-            <ul id="nav-mobile" class="right hide-on-med-and-down grey darken-4">
-              <li><a class="waves-effect waves-light deep-orange btn">+</a></li>
-              <li><a class="waves-effect waves-light deep-orange btn">-</a></li>
-            </ul>
-          </div>
-        </nav>
-      <!--img class="responsive-img" src="img/cats.jpg"></img-->
+      <nav>
+        <div class="nav-wrapper grey darken-4">
+          <ul id="nav-mobile" class="right hide-on-med-and-down grey darken-4">
+            <li><a class="waves-effect waves-light btn modal-trigger" href="#example-modal">Examples</a></li>
+          </ul>
+        </div>
+      </nav>
+      
+      <div class="container">
+        <h4>How many recognizable <u><a class="modal-trigger" href="#example-modal">people</a></u> are in each of the pictures below? </h4>
+        <p>Enter your best estimate in the text boxes under each picture.</p>
 
       <form method="POST">
-        <ul class="slides">
-        <img class="responsive-img taggd" src="img/people1.jpg"></img>
-        <label>Total clicks:</label><input type="text" name="image1" value="0"><br>
-        <img class="responsive-img taggd" src="img/people2.jpg"></img>
-        <label>Total clicks:</label><input type="text" name="image2"><br>
-        <img class="responsive-img taggd" src="img/people3.jpg"></img>
-        <label>Total clicks:</label><input type="text" name="image3"><br>
-        <img class="responsive-img taggd" src="img/people4.jpg"></img>
-        <label>Total clicks:</label><input type="text" name="image4"><br>
-        <img class="responsive-img taggd" src="img/people5.jpg"></img>
-        <label>Total clicks:</label><input type="text" name="image5"><br>
-        <img class="responsive-img taggd" src="img/people6.jpg"></img>
-        <label>Total clicks:</label><input type="text" name="image6"><br>
-        <label>Total clicks:</label><input type="text" name="image7"><br>
+        <div class="section">
+          <h5>Image 1</h5>
+          <img class="responsive-img taggd people" src="img/people1.jpg"></img><br>
+          <label>Total people in Image 1:</label><input type="text" name="image1" placeholder="Enter a number here"><br>
+        </div>
+        <div class="divider"></div>
+        <div class="section">
+          <h5>Image 2</h5>
+          <img class="responsive-img taggd people" src="img/people2.jpg"></img><br>
+          <label>Total people in Image 2:</label><input type="text" name="image2" placeholder="Enter a number here"><br>
+        </div>
+        <div class="divider"></div>
+        <div class="section">
+          <h5>Image 3</h5>
+          <img class="responsive-img taggd people" src="img/people3.jpg"></img><br>
+          <label>Total people in Image 3:</label><input type="text" name="image3" placeholder="Enter a number here"><br>
+        </div>
+        <div class="divider"></div>
+        <div class="section">
+          <h5>Image 4</h5>
+          <img class="responsive-img taggd people" src="img/people4.jpg"></img><br>
+          <label>Total people in Image 4:</label><input type="text" name="image4" placeholder="Enter a number here"><br>
+        </div>
+        <div class="divider"></div>
+        <div class="section">
+          <h5>Image 5</h5>
+          <img class="responsive-img taggd people" src="img/people5.jpg"></img><br>
+          <label>Total people in Image 5:</label><input type="text" name="image5" placeholder="Enter a number here"><br>
+        </div>
+        <div class="divider"></div>
+        <div class="section">
+          <h5>Image 6</h5>
+          <img class="responsive-img taggd people" src="img/people6.jpg"></img><br>
+          <label>Total people in Image 6:</label><input type="text" name="image6" placeholder="Enter a number here"><br>
+        </div>
+        <div class="divider"></div>
+        <div class="section">
+          <h5>Image 7</h5>
+          <img class="responsive-img taggd people" src="img/people7.jpg"></img><br>
+          <label>Total people in Image 7:</label><input type="text" name="image7" placeholder="Enter a number here"><br>
+        </div>
+        <div class="divider"></div>
+
         <input class="btn disabled" type="submit" value="submit">
       </form>
 
@@ -69,6 +95,7 @@
           <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
         </div>
       </div>
+    </div>
 
       <!-- Scripts -->
       <!--Import jQuery before materialize.js-->
