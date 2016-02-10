@@ -1,33 +1,98 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Bootstrap 101 Template</title>
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <!-- Compiled and minified CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+      <link rel="stylesheet" type="text/css" href="css/taggd.css" />
 
-    <!-- Bootstrap -->
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <h1>Hello, world!</h1>
+    <body>
+        <nav>
+          <div class="nav-wrapper grey darken-4">
+            <span>Click on all the recognizable <u><a class="modal-trigger" href="#example-modal">people</a></u> in the pictures below.</span>
+            <ul id="nav-mobile" class="left hide-on-med-and-down grey darken-4">
+              <li><a class="waves-effect waves-light btn">Undo</a></li>
+              <li><a class="waves-effect waves-light btn">Redo</a></li>
+            </ul>
+            <ul id="nav-mobile" class="right hide-on-med-and-down grey darken-4">
+              <li><a class="waves-effect waves-light deep-orange btn">+</a></li>
+              <li><a class="waves-effect waves-light deep-orange btn">-</a></li>
+            </ul>
+          </div>
+        </nav>
+      <!--img class="responsive-img" src="img/cats.jpg"></img-->
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-  </body>
-</html>
+      <form method="POST">
+        <ul class="slides">
+        <img class="responsive-img" src="img/people1.jpg"></img>
+        <label>Total clicks:</label><input type="text" name="image1" value="0"><br>
+        <img class="responsive-img" src="img/people2.jpg"></img>
+        <label>Total clicks:</label><input type="text" name="image2"><br>
+        <img class="responsive-img" src="img/people3.jpg"></img>
+        <label>Total clicks:</label><input type="text" name="image3"><br>
+        <img class="responsive-img" src="img/people4.jpg"></img>
+        <label>Total clicks:</label><input type="text" name="image4"><br>
+        <img class="responsive-img" src="img/people5.jpg"></img>
+        <label>Total clicks:</label><input type="text" name="image5"><br>
+        <img class="responsive-img" src="img/people6.jpg"></img>
+        <label>Total clicks:</label><input type="text" name="image6"><br>
+        <label>Total clicks:</label><input type="text" name="image7"><br>
+        <input class="btn disabled" type="submit" value="submit">
+      </form>
+
+      <div id="example-modal" class="modal">
+        <div class="modal-content">
+          <h4>What is considered a recognizable person?</h4>
+          <p>We want to figure out how many people are in each of these photos so that we can later tag them. Use your best judgement in identifying individuals. </p>
+          <p>In the context of these photos, a recognizable person:
+            <ol>
+              <li>has the <b>majority of their face/heads</b> in a picture,</li>
+              <li>does <b>not</b> also include their <b>reflections</b> (only count one person once),</li>
+              <li>and is a <b>human</b> and not an animal.</li>
+            </ol>
+          </p>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+      </div>
+
+      <!-- Scripts -->
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <!-- Compiled and minified JavaScript -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js">
+      </script>
+
+      <script src="js/mturk.js"></script>
+      <script type="text/javascript" src="js/jquery.taggd.min.js"></script>
+      
+      <script type="text/javascript">
+        var data = [];
+        var settings = [];
+
+        $(window).load(function() {
+          $('.taggd').each(function(i, e) {
+            var $e = $(e);
+
+            $e.taggd(settings[i]);
+            $e.taggd('items', data[i])
+          });
+        });
+      </script>
+
+      <script>
+      $(document).ready(function(){
+        // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+        $('.modal-trigger').leanModal();
+      });
+      </script>
+    </body>
+  </html>
