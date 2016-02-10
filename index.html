@@ -31,17 +31,17 @@
 
       <form method="POST">
         <ul class="slides">
-        <img class="responsive-img" src="img/people1.jpg"></img>
+        <img class="responsive-img taggd" src="img/people1.jpg"></img>
         <label>Total clicks:</label><input type="text" name="image1" value="0"><br>
-        <img class="responsive-img" src="img/people2.jpg"></img>
+        <img class="responsive-img taggd" src="img/people2.jpg"></img>
         <label>Total clicks:</label><input type="text" name="image2"><br>
-        <img class="responsive-img" src="img/people3.jpg"></img>
+        <img class="responsive-img taggd" src="img/people3.jpg"></img>
         <label>Total clicks:</label><input type="text" name="image3"><br>
-        <img class="responsive-img" src="img/people4.jpg"></img>
+        <img class="responsive-img taggd" src="img/people4.jpg"></img>
         <label>Total clicks:</label><input type="text" name="image4"><br>
-        <img class="responsive-img" src="img/people5.jpg"></img>
+        <img class="responsive-img taggd" src="img/people5.jpg"></img>
         <label>Total clicks:</label><input type="text" name="image5"><br>
-        <img class="responsive-img" src="img/people6.jpg"></img>
+        <img class="responsive-img taggd" src="img/people6.jpg"></img>
         <label>Total clicks:</label><input type="text" name="image6"><br>
         <label>Total clicks:</label><input type="text" name="image7"><br>
         <input class="btn disabled" type="submit" value="submit">
@@ -86,6 +86,23 @@
             $e.taggd('items', data[i])
           });
         });
+      </script>
+      <script type="text/javascript">
+        data.push([
+        { x: 0.512, y: 0.33, text: 'Huey' },
+        { x: 0.548, y: 0.33, text: 'Dewey' },
+        { x: 0.567, y: 0.36, text: 'Louie' }
+        ]);
+
+        settings.push({
+        align: { 'y': 'bottom' },
+        offset: { 'top': -15 },
+
+        'handlers': {
+        'mouseenter': 'show',
+        'mouseleave': 'hide'
+        }
+      });
       </script>
 
       <script>
